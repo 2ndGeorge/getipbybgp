@@ -14,6 +14,7 @@ total_list_as= []
 total_num_v4 = 0
 total_num_v6 = 0
 total_num_as = 0
+cookie = "c=BAgiFDE3MS4yMTAuMTgxLjE0Mw==--a00bad7b5c82a0650685e0b7869a818bfccd818f"
 
 
 def request(url, params):
@@ -23,7 +24,7 @@ def request(url, params):
     proxy={}
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13;",
-        "Cookie" : "c=BAgiEjIyMy4xMjkuNzguNTM=--88fd68af50f69ec2d0d5c7f5eccf186273f49d06"
+        "Cookie" : cookie
     }
     return session.get(url = url, params=params, headers=headers, proxies=proxy, verify=False).content
 
